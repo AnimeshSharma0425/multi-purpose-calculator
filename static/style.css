@@ -1,0 +1,175 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 16px;
+  font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+  background: linear-gradient(135deg, #0ea5e9, #6366f1);
+}
+
+.card {
+  width: 100%;
+  max-width: 560px;
+  background: #fff;
+  border-radius: 16px;
+  padding: 28px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+  margin: 0 0 18px;
+  text-align: center;
+  font-size: 1.6rem;
+  color: #1f2937;
+}
+
+h2 {
+  margin: 0 0 12px;
+  font-size: 1.05rem;
+  color: #312e81;
+}
+
+.hidden {
+  display: none !important;
+}
+
+/* menu */
+.menu {
+  margin: 0 0 18px;
+  padding: 12px 12px 12px 36px;
+  background: #f5f3ff;
+  border-radius: 10px;
+  color: #4338ca;
+  font-size: 0.9rem;
+  font-weight: 600;
+  line-height: 1.75;
+  columns: 2;
+  column-gap: 24px;
+}
+
+.menu li {
+  break-inside: avoid;
+}
+
+/* forms */
+form {
+  display: block;
+}
+
+#values-form {
+  margin-top: 18px;
+  padding-top: 18px;
+  border-top: 1px solid #e5e7eb;
+}
+
+.field {
+  margin-bottom: 12px;
+}
+
+label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 0.9rem;
+  color: #4b5563;
+}
+
+.row {
+  display: flex;
+  gap: 8px;
+}
+
+input[type="number"] {
+  width: 100%;
+  min-width: 0;
+  padding: 10px 14px;
+  font-size: 1rem;
+  font-family: inherit;
+  border: 2px solid #e5e7eb;
+  border-radius: 10px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.row input {
+  flex: 1;
+}
+
+input[type="number"]:focus {
+  border-color: #6366f1;
+}
+
+button {
+  cursor: pointer;
+  padding: 10px 22px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #fff;
+  background: #4f46e5;
+  border: none;
+  border-radius: 10px;
+  transition: background 0.2s, transform 0.1s;
+}
+
+button:hover {
+  background: #4338ca;
+}
+
+button:active {
+  transform: scale(0.97);
+}
+
+button:disabled {
+  background: #c7c7d1;
+  cursor: not-allowed;
+}
+
+.calc-btn {
+  width: 100%;
+  margin-top: 4px;
+}
+
+/* messages and result */
+.message {
+  min-height: 1.2em;
+  margin: 12px 0 0;
+  font-size: 0.9rem;
+  color: #059669;
+}
+
+.message.error {
+  color: #dc2626;
+}
+
+.result {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-top: 14px;
+  padding: 16px;
+  background: #eef2ff;
+  border-radius: 12px;
+}
+
+.result-label {
+  font-size: 0.78rem;
+  color: #6b7280;
+}
+
+.result-value {
+  font-size: 1.7rem;
+  font-weight: 700;
+  color: #312e81;
+  word-break: break-all;
+}
+
+@media (max-width: 460px) {
+  .menu {
+    columns: 1;
+  }
+}

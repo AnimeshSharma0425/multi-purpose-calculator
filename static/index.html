@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Multi-Purpose Calculator</title>
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+  <main class="card">
+    <h1>Multi-Purpose Calculator</h1>
+
+    <ol id="menu" class="menu" aria-label="Calculator options"></ol>
+
+    <!-- Step 1: enter a condition number -->
+    <form id="condition-form" autocomplete="off">
+      <label for="condition">Enter a condition:</label>
+      <div class="row">
+        <input id="condition" type="number" step="1" placeholder="1 - 18" required />
+        <button type="submit">Go</button>
+      </div>
+    </form>
+
+    <!-- Step 2: inputs for the chosen option (built by script.js) -->
+    <form id="values-form" class="hidden" autocomplete="off">
+      <h2 id="op-name"></h2>
+      <div id="fields"></div>
+      <button type="submit" class="calc-btn">Calculate</button>
+    </form>
+
+    <p id="message" class="message" role="status"></p>
+
+    <section id="result" class="result hidden" aria-live="polite">
+      <span class="result-label">Result</span>
+      <span id="result-value" class="result-value"></span>
+    </section>
+  </main>
+
+  <script src="/static/script.js"></script>
+</body>
+</html>

@@ -57,3 +57,4 @@ Push this folder to the root of a GitHub repo (`main.py` and `static/` must be a
 ## License
 
 MIT
+https://multi-purpose-calculator-9dlk.onrender.com
